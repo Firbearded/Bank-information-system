@@ -1,2 +1,2 @@
-# Bank-s-information-system
+# Bank-information-system
 Разработка информационной системы банка в качестве курсовой работы
