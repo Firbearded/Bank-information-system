@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Получение информации о клиентах по номеру телефона</title>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}">.
+</head>
+<body>
+  <h2 align="center">Получение информации о клиентах с телефонным номером в заданном диапазоне</h2>
+    <div align = center>
+        <form action="", method ="POST">
+            <label for="id_number1">Введите начало промежутка номеров</label>
+            <input name = "input_date1" id="id_number1" type = "number" placeholder = "Начало">
+            <br><br>
+            <label for="id_number2">Введите конец промежутка номеров</label>
+            <input name = "input_date2" id="id_number2" type = "number" placeholder = "Конец">
+            <br><br>
+            <input type = submit value ="Отправить">
+        </form>
+        <br><br>
+        <a href={{url_for('bp_query.queries')}}> Назад</a>
+    </div>
+</body>
+</html>

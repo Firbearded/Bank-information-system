@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Открытие счета</title>
+</head>
+<body>
+  <h2 align="center">Счет успешно открыт</h2>
+    <div align = center>
+        Номер вашего счета: {{in_num}}
+        <br>
+        Валюта счета: {{in_cur}}
+        <br><br>
+        <a href={{url_for('bp_accounts.all_accounts')}}>Готово</a>
+    </div>
+</body>
+</html>

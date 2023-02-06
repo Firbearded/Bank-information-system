@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Открытие счета</title>
+</head>
+<body>
+  <h2 align="center">Открытие счета</h2>
+    <div align = center>
+
+        <form action="", method ="POST">
+            Выберите расчетную валюту счета:
+            <p><select size="3" name=input_curr>
+                <option disabled>Выберите валюту из списка</option>
+                {% for curr in curr_list %}
+                    <option value={{curr[0]}}> {{curr[0]}} </option>
+                {% endfor %}
+            </select></p><br>
+            <input type="hidden" name="id_c" value={{id_c}}>
+            <button type=submit name=action value="new_filled">Выбрать</button>
+            <br><br>
+        </form>
+        <br><br>
+        <a href={{url_for('bp_accounts.all_accounts')}}>Назад</a>
+    </div>
+</body>
+</html>

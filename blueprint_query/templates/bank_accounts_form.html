@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Получение аккаунтов клиента</title>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}">.
+</head>
+<body>
+  <h2 align="center"> Получение аккаунтов клиента по его ФИО</h2>
+    <div align = center>
+        <form action="", method ="POST">
+            <label for="surname">Введите фамилию</label>
+            <input name = "input_surname" id="surname" type = "text" placeholder = "Фамилия клиента">
+            <br><br>
+            <label for="name">Введите имя</label>
+            <input name = "input_name" id="name" type = "text" placeholder = "Имя клиента">
+            <br><br>
+            <label for="second_name">Введите отчество, если есть</label>
+            <input name = "input_second_name" id="second_name" type = "text" placeholder = "Отчество клиента">
+            <br><br>
+            <input type = submit value ="Отправить">
+        </form>
+        <br><br>
+        <a href={{url_for('bp_query.queries')}}> Назад</a>
+    </div>
+</body>
+</html>

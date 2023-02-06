@@ -1,0 +1,1 @@
+SELECT max(number) FROM bank.bank_account;

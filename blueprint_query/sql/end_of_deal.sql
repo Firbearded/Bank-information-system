@@ -1,0 +1,2 @@
+select surname, name, second_name, date_of_birth, address, phone_numb, date_of_deal, end_of_deal
+from client where to_days(end_of_deal) >= to_days('$input_date1') and to_days(end_of_deal) <= to_days('$input_date2')

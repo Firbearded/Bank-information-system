@@ -1,0 +1,1 @@
+select id_c from external_user where user_id='$get_user_id'

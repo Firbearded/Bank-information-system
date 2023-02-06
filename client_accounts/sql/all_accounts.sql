@@ -1,0 +1,1 @@
+select * from bank_account where id_c = '$id_client'

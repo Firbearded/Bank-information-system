@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Получение истории счета</title>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}">.
+</head>
+<body>
+  <h2 align="center">Получение истории счета по его номеру</h2>
+    <div align = center>
+        <form action="", method ="POST">
+            <label for="account_number">Введите 12-значный номер счета</label>
+            <input name = "input_account_number" id="account_number" type = "text" placeholder = "номер счета">
+            <br><br>
+            <input type = submit value ="Отправить">
+        </form>
+        <br><br>
+        <a href={{url_for('bp_query.queries')}}> Назад</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Перевод</title>
+</head>
+<body>
+  <h2 align="center">Перевод со счета {{number}}</h2>
+    <div align = center>
+        <h2>{{message}}</h2>
+        <form action="", method ="POST">
+            <label>Нынешний баланс счета: {{balance}} {{currency}}</label>
+            <br><br>
+            <label for="number">Введите номер счета для перевода: </label>
+            <input name = "input_number" id="number" type = "text" placeholder = "12-значный номер счета">
+            <br>
+            <label for="sum">Введите сумму перевода: </label>
+            <input name = "input_amount" id="sum" type = "number" step = "any" placeholder = "Сумма перевода (в {{currency}})">
+            <br><br>
+            <button type=submit name=action value="transact_filled">Перевести</button>
+
+            <input type="hidden" name="number" value="{{number}}">
+            <input type="hidden" name="currency" value="{{currency}}">
+            <input type="hidden" name="balance" value="{{balance}}">
+        </form>
+        <br><br>
+        <a href={{url_for('bp_accounts.all_accounts')}}>Назад</a>
+    </div>
+</body>
+</html>

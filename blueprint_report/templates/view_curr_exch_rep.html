@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отчет об обменах валют</title>
+</head>
+<body>
+        <form action="", method ="POST">
+        <h2 align="center", method = POST>Отчет об обменах одной валюты в другие</h2>
+        <center>
+            Введите месяц и год:<br><br>
+            <input type="month" name = input_date><br><br>
+            Выберите валюту:
+            <p><select size="3" name=input_curr>
+                <option disabled>Выберите валюту из списка</option>
+                {% for curr in curr_list %}
+                    <option value={{curr[0]}}> {{curr[0]}} </option>
+                {% endfor %}
+            </select></p><br><br>
+            <input type="submit" value="Просмотреть">
+            <br><br>
+
+            <a href={{url_for('bp_report.start_report')}}> Вернуться в меню отчетов</a>
+        </center>
+    </form>
+</body>
+</html>

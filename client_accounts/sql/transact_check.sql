@@ -1,0 +1,1 @@
+select balance from bank_account where number = $input_number

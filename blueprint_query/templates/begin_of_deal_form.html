@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Получение сведений о клиентах, заключивших контракт</title>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}">.
+</head>
+<body>
+  <h2 align="center">Получение сведений о клиентах, заключивших контракт с банком за промежуток времени</h2>
+    <div align = center>
+        <form action="", method ="POST">
+            <label for="id_date1">Введите начало временного промежутка</label>
+            <input name = "input_date1" id="id_date1" type = "date" placeholder = "Начало">
+            <br><br>
+            <label for="id_date2">Введите конец временного промежутка</label>
+            <input name = "input_date2" id="id_date2" type = "date" placeholder = "Конец">
+            <br><br>
+            <input type = submit value ="Отправить">
+        </form>
+        <br><br>
+        <a href={{url_for('bp_query.queries')}}> Назад</a>
+    </div>
+</body>
+</html>

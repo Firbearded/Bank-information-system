@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменение внутреннего курса банка</title>
+    <style type="text/css">
+        .named_list {
+            font-size: 12pt;
+            color: green;
+            display: inline-block;
+            width: 300px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2 align = center>Список всех обменных операций</h2>
+    <div align="center">
+        <h3>{{message}}</h3>
+        <form action='' method="post">
+            <p><select size="3" name=input_curr1>
+                <option disabled>1-я валюта</option>
+                {% for curr in curr_list1 %}
+                    <option value={{curr[0]}}> {{curr[0]}} </option>
+                {% endfor %}
+            </select></p>
+            <p><select size="3" name=input_curr2>
+                <option disabled>2-я валюта</option>
+                {% for curr in curr_list2 %}
+                    <option value={{curr[0]}}> {{curr[0]}} </option>
+                {% endfor %}
+            </select></p>
+            <button type=submit name=action value="edit_trade">Редактировать</button>
+        </form>
+        <br><br>
+        <a href = {{url_for('menu_choice')}}> Назад </a>
+
+    </div>
+</body>
+</html>

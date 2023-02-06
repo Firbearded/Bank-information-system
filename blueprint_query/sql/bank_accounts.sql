@@ -1,0 +1,2 @@
+select number, balance, currency, datetime_of_balance from bank_account
+where id_c = (select id_c from client where surname = '$input_surname' and name = '$input_name' and second_name $input_second_name)

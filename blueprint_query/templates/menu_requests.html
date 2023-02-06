@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}">.
+</head>
+<body>
+  <h1 align="center">Выберите тип запроса</h1>
+     <div align = center>
+         <form method="post">
+         {% for query in query_list %}
+            <button type="submit" name="query_id" value="{{query['query_id']}}">{{query['query_name']}}</button>
+            <br><br>
+         {% endfor %}
+         </form>
+         <a href={{url_for('menu_choice')}}>Назад</a>
+     </div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "1":
+  {
+    "url": "bp_query.queries",
+    "name": "Начать работу с запросами"
+  },
+  "2":
+  {
+    "url": "bp_report.start_report",
+    "name": "Начать работу с отчетами"
+  },
+  "3":
+  {
+    "url": "bp_edit_exch_rate.start_edit",
+    "name": "Изменить внутренний обменный курс банка"
+  },
+  "4":
+  {
+    "url": "bp_accounts.all_accounts",
+    "name": "Мои счета"
+  }
+}

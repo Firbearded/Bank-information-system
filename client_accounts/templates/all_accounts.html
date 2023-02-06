@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список счетов</title>
+</head>
+<body>
+<h2 align="center">Выберите счет для работы с ним</h2>
+<div align = center>
+
+    {% for account in accounts %}
+    <!---<form action="" method="post">
+        <button type="submit" name="number" value="{{account['number']}}">{{account['number']}}</button>
+    </form>--->
+    <form action='' method="post">
+        <label>{{account['number']}}</label>
+        <br>
+        <label for="balance_id">Баланс счета: </label>
+        <label id="balance_id">{{account['balance']}} {{account['currency']}}</label>
+        <br>
+        <button type=submit name=action value="transact">Совершить перевод</button>
+        <button type=submit name=action value="history">История операций</button>
+        <input type="hidden" name="number" value="{{account['number']}}">
+        <input type="hidden" name="currency" value="{{account['currency']}}">
+        <input type="hidden" name="balance" value={{account['balance']}}>
+    </form>
+    <br><br>
+    {% endfor %}
+
+    <form action='' method="post">
+        <button type=submit name=action value="new">Открыть счет</button>
+        <input type="hidden" name="id_c" value={{accounts[0]['id_c']}}>
+    </form>
+    <br><br>
+    <a href={{url_for('menu_choice')}}>Назад</a>
+</div>
+</body>
+</html>

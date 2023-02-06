@@ -1,0 +1,1 @@
+insert into bank_account values(NULL, '$in_num', '$in_cur', 0, now(), $in_id_c);
